@@ -1,0 +1,400 @@
+/* 
+  Modern Blue & White Auth UI
+  - Background image with gradient overlay
+  - Glassmorphism wrapper
+  - Floating labels
+  - Accessible contrast and smooth animations
+  - Responsive design
+*/
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Design Tokens */
+:root {
+  --blue-25: #f5faff;
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+
+  --bg: #0b1220; /* dark base behind image for better contrast */
+  --white: #ffffff;
+  --text: #0f172a;
+  --muted: #6b7280;
+
+  --radius-xl: 20px;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+
+  --shadow-soft: 0 10px 25px rgba(2, 8, 23, 0.25);
+  --shadow-hard: 0 12px 40px rgba(2, 8, 23, 0.35);
+  --ring: 0 0 0 4px rgba(59, 130, 246, 0.15);
+
+  --transition-fast: 160ms ease;
+  --transition-med: 240ms cubic-bezier(.21,.9,.42,1);
+}
+
+/* Reset basics */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--text);
+  background:
+    linear-gradient(120deg, rgba(30, 64, 175, 0.7), rgba(59, 130, 246, 0.55)) center/cover no-repeat,
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat,
+    var(--bg);
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+}
+
+/* Subtle animated particles (optional decorative) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(800px 400px at 80% 10%, rgba(59, 130, 246, 0.18), transparent 60%),
+    radial-gradient(600px 300px at 20% 80%, rgba(37, 99, 235, 0.18), transparent 60%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* Wrapper (glassmorphism card) */
+.wrapper {
+  width: 100%;
+  max-width: 440px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.78));
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+  padding: 22px 24px 24px;
+  animation: cardIn 420ms var(--transition-med) both;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Header tabs */
+.form-header {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.titles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  background: var(--blue-50);
+  border-radius: var(--radius-md);
+  padding: 6px;
+  border: 1px solid var(--blue-100);
+}
+
+.titles > div {
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--blue-700);
+  cursor: pointer; /* changed from default so tabs are clickable */
+  user-select: none;
+}
+
+/* Keyboard focus for tabs (JS adds role=tab) */
+.titles > div:focus-visible,
+.titles > div[role="tab"]:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+  border-radius: 10px;
+}
+
+/* Default active is Login */
+.title-login {
+  background: var(--white);
+  color: var(--blue-800);
+  box-shadow: inset 0 -1px 0 rgba(2, 8, 23, 0.04), 0 1px 2px rgba(2,8,23,0.08);
+}
+
+/* If wrapper toggles to register (optional class you may set from JS) */
+.wrapper.register-active .title-login {
+  background: transparent;
+  color: var(--blue-700);
+  box-shadow: none;
+}
+
+.wrapper.register-active .title-register {
+  background: var(--white);
+  color: var(--blue-800);
+  box-shadow: inset 0 -1px 0 rgba(2, 8, 23, 0.04), 0 1px 2px rgba(2,8,23,0.08);
+}
+
+/* Forms */
+form {
+  margin-top: 14px;
+}
+
+.login-form { display: block; }
+.register-form { display: none; }
+
+/* Optional class to show register form (use from JS if you want) */
+.wrapper.register-active .login-form { display: none; }
+.wrapper.register-active .register-form { display: block; }
+
+/* Form fields */
+.input-box {
+  position: relative;
+  margin: 20px 0;
+}
+
+.input-field {
+  width: 100%;
+  padding: 16px 44px 16px 48px; /* room for icon */
+  border: 1.25px solid var(--blue-100);
+  border-radius: 12px;
+  background: var(--white);
+  outline: none;
+  font-size: 15px;
+  color: var(--text);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  box-shadow: inset 0 1px 0 rgba(2, 8, 23, 0.04);
+}
+
+.input-field::placeholder { color: transparent; } /* we use floating label */
+.input-field:focus {
+  border-color: var(--blue-400);
+  box-shadow: var(--ring);
+}
+
+.input-field:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Floating label */
+.label {
+  position: absolute;
+  left: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 14px;
+  pointer-events: none;
+  background: transparent;
+  transition: transform var(--transition-med), color var(--transition-fast), font-size var(--transition-fast), top var(--transition-med), left var(--transition-med);
+}
+
+/* Float on focus or when filled (using :valid for required fields) */
+.input-field:focus + .label,
+.input-field:valid + .label {
+  top: -8px;
+  left: 12px;
+  transform: none;
+  font-size: 12px;
+  color: var(--blue-700);
+  background: linear-gradient(180deg, transparent 40%, var(--white) 40%);
+  padding: 0 6px;
+  border-radius: 6px;
+}
+
+/* Icons */
+.icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--blue-600);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* Columns (remember me / forgot password and T&C) */
+.form-cols {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 8px 0 4px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.form-cols a {
+  color: var(--blue-700);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-cols a:hover {
+  color: var(--blue-800);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Checkbox styling (agree) */
+#agree {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  border: 1.25px solid var(--blue-200);
+  display: inline-grid;
+  place-content: center;
+  margin-right: 8px;
+  background: var(--white);
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+  vertical-align: middle;
+}
+#agree:focus {
+  outline: none;
+  box-shadow: var(--ring);
+  border-color: var(--blue-400);
+}
+#agree::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  transition: transform var(--transition-med);
+  clip-path: polygon(14% 44%, 0 59%, 39% 100%, 100% 26%, 84% 10%, 39% 68%);
+  background: var(--blue-600);
+}
+#agree:checked {
+  border-color: var(--blue-500);
+  background: var(--blue-100);
+}
+#agree:checked::before {
+  transform: scale(1);
+}
+
+/* Submit button */
+.btn-submit {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--blue-500), var(--blue-600));
+  color: var(--white);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35), inset 0 -1px 0 rgba(255,255,255,0.25);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
+}
+
+.btn-submit i {
+  vertical-align: middle;
+  margin-left: 6px;
+  font-size: 18px;
+}
+
+.btn-submit:hover {
+  filter: brightness(1.02);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.4), inset 0 -1px 0 rgba(255,255,255,0.25);
+}
+
+.btn-submit:active {
+  transform: translateY(1px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
+}
+
+.btn-submit:focus-visible {
+  outline: none;
+  box-shadow: var(--ring), 0 6px 14px rgba(37, 99, 235, 0.35);
+}
+
+/* Switch form text */
+.switch-form {
+  text-align: center;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.switch-form a {
+  color: var(--blue-700);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.switch-form a:hover {
+  color: var(--blue-800);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Small helper for error states (if you add classes via JS) */
+.input-box.error .input-field {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15);
+}
+.input-box.error .label {
+  color: #b91c1c;
+}
+
+/* Make sure links have good focus styles */
+a:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+  border-radius: 6px;
+}
+
+/* Responsiveness */
+@media (max-width: 520px) {
+  .wrapper {
+    padding: 18px;
+    border-radius: 16px;
+  }
+  .titles {
+    padding: 5px;
+  }
+  .titles > div {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  .input-field {
+    padding: 14px 42px 14px 46px;
+    font-size: 14px;
+  }
+  .label {
+    left: 46px;
+  }
+}
+
+/* Optional: subtle form transition when switching */
+.login-form,
+.register-form {
+  animation: formFade 260ms var(--transition-med);
+}
+
+@keyframes formFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
