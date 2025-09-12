@@ -107,16 +107,7 @@ Add your authentication logic (e.g., fetch/axios) as needed.
 
 🖼️ Preview
 
-You can add a screenshot or animated GIF here:
-
-/screenshots/
-└── preview.png
-
-
-Markdown:
-
-![Preview](screenshots/preview.png)
-
+![image](https://github.com/MdSaifAli063/Login-Register-UI/blob/8b116218cd8637c3cb2fa8729e3ae9b3d97ef82e/Screenshot%202025-09-13%20014449.png)
 
 
 🤝 Contributing
