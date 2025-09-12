@@ -108,6 +108,7 @@ Add your authentication logic (e.g., fetch/axios) as needed.
 🖼️ Preview
 
 ![image](https://github.com/MdSaifAli063/Login-Register-UI/blob/8b116218cd8637c3cb2fa8729e3ae9b3d97ef82e/Screenshot%202025-09-13%20014449.png)
+![image](https://github.com/MdSaifAli063/Login-Register-UI/blob/fee633c0c5cf603380553214d3c6e641b300882a/Screenshot%202025-09-13%20014254.png)
 
 
 🤝 Contributing
