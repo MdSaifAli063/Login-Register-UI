@@ -125,10 +125,10 @@ js/script.js can:
 
 This project is provided as-is for personal or commercial use. If you need a specific license (e.g., MIT), add a LICENSE file and update this section accordingly.
 
-🙏 Acknowledgements
+## 🙏 Acknowledgements
 
-Icons: Boxicons
-Fonts/Design inspiration: Inter + modern auth UI patterns
+- Icons: Boxicons
+- Fonts/Design inspiration: Inter + modern auth UI patterns
 
 ❓ FAQ
 
