@@ -47,7 +47,6 @@ A clean, modern Login & Register interface built with HTML, CSS, and JavaScript 
   - Use the “Register” / “Login” link under the submit button
 - The provided js/script.js should handle switching forms (e.g., toggling classes or calling `registerFunction()` / `loginFunction()` as used in the HTML)
 
----
 
 ## 🧑‍🎨 Add Your Logo or Avatar
 
