@@ -103,10 +103,10 @@ CSS if desired.
 ## 🧰 Scripts
 
 js/script.js can:
-Toggle the active form (login/register)
-Add/remove a class on .wrapper (e.g., .register-active) if your CSS uses it
-Handle basic events like button clicks and form submission
-Add your authentication logic (e.g., fetch/axios) as needed.
+- Toggle the active form (login/register)
+- Add/remove a class on .wrapper (e.g., .register-active) if your CSS uses it
+- Handle basic events like button clicks and form submission
+- Add your authentication logic (e.g., fetch/axios) as needed.
 
 🖼️ Preview
 
