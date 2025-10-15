@@ -130,7 +130,7 @@ This project is provided as-is for personal or commercial use. If you need a spe
 - Icons: Boxicons
 - Fonts/Design inspiration: Inter + modern auth UI patterns
 
-❓ FAQ
+## ❓ FAQ
 
 - Q: Can I use Font Awesome instead?
 - A: Yes, swap the Boxicons CDN and update icon class names accordingly.
