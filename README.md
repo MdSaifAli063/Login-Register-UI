@@ -116,10 +116,10 @@ js/script.js can:
 
 ## 🤝 Contributing
 
-Fork the repo
-Create a feature branch: git checkout -b feat/better-validation
-Commit changes: git commit -m "Improve form validation and focus states"
-Push and open a PR
+- Fork the repo
+- Create a feature branch: git checkout -b feat/better-validation
+- Commit changes: git commit -m "Improve form validation and focus states"
+- Push and open a PR
 
 📄 License
 
