@@ -73,9 +73,9 @@ Example (user avatar):
 ```
 Notes:
 
-Put your image under assets/ (or any path you prefer) and update the src.
-The .avatar class renders the logo circular, ideal for user photos.
-Ensure the stylesheet includes styles for .brand, .brand-logo, and .brand-title (if you’re using the enhanced UI styles).
+- Put your image under assets/ (or any path you prefer) and update the src.
+- The .avatar class renders the logo circular, ideal for user photos.
+- Ensure the stylesheet includes styles for .brand, .brand-logo, and .brand-title (if you’re using the enhanced UI styles).
 
 🎨 Customization
 
