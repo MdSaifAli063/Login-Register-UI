@@ -132,7 +132,7 @@ This project is provided as-is for personal or commercial use. If you need a spe
 
 ❓ FAQ
 
-Q: Can I use Font Awesome instead?
-A: Yes, swap the Boxicons CDN and update icon class names accordingly.
-Q: How do I change the primary color?
-A: Update the relevant CSS variables (e.g., --blue-500, --blue-600) in css/style.css.
+- Q: Can I use Font Awesome instead?
+- A: Yes, swap the Boxicons CDN and update icon class names accordingly.
+- Q: How do I change the primary color?
+- A: Update the relevant CSS variables (e.g., --blue-500, --blue-600) in css/style.css.
