@@ -94,7 +94,7 @@ Use them in HTML like:
 Background: Replace or remove any background image/gradient rules in your
 CSS if desired.
 
-♿ Accessibility
+## ♿ Accessibility
 
 Labels are associated with inputs via for and id.
 Keyboard users can tab through inputs and buttons.
