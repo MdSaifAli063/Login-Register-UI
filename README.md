@@ -39,7 +39,6 @@ A clean, modern Login & Register interface built with HTML, CSS, and JavaScript 
   - VS Code: Install “Live Server” → Open index.html → Right-click → “Open with Live Server”
   - Python: `python -m http.server 8080` then visit http://localhost:8080
 
----
 
 ## 🖱️ Usage
 
