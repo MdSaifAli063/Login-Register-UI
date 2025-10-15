@@ -121,7 +121,7 @@ js/script.js can:
 - Commit changes: git commit -m "Improve form validation and focus states"
 - Push and open a PR
 
-📄 License
+## 📄 License
 
 This project is provided as-is for personal or commercial use. If you need a specific license (e.g., MIT), add a LICENSE file and update this section accordingly.
 
