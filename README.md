@@ -21,7 +21,11 @@ A clean, modern Login & Register interface built with HTML, CSS, and JavaScript 
 - 🧪 Basic HTML5 validation (required fields)
 - 🎛️ Easy theme tweaks via CSS variables
 
----
+
+🖼️ Preview
+
+![image](https://github.com/MdSaifAli063/Login-Register-UI/blob/8b116218cd8637c3cb2fa8729e3ae9b3d97ef82e/Screenshot%202025-09-13%20014449.png)
+![image](https://github.com/MdSaifAli063/Login-Register-UI/blob/fee633c0c5cf603380553214d3c6e641b300882a/Screenshot%202025-09-13%20014254.png)
 
 ## 📂 Project Structure
 
@@ -107,11 +111,6 @@ js/script.js can:
 - Add/remove a class on .wrapper (e.g., .register-active) if your CSS uses it
 - Handle basic events like button clicks and form submission
 - Add your authentication logic (e.g., fetch/axios) as needed.
-
-🖼️ Preview
-
-![image](https://github.com/MdSaifAli063/Login-Register-UI/blob/8b116218cd8637c3cb2fa8729e3ae9b3d97ef82e/Screenshot%202025-09-13%20014449.png)
-![image](https://github.com/MdSaifAli063/Login-Register-UI/blob/fee633c0c5cf603380553214d3c6e641b300882a/Screenshot%202025-09-13%20014254.png)
 
 
 ## 🤝 Contributing
