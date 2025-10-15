@@ -77,7 +77,7 @@ Notes:
 - The .avatar class renders the logo circular, ideal for user photos.
 - Ensure the stylesheet includes styles for .brand, .brand-logo, and .brand-title (if you’re using the enhanced UI styles).
 
-🎨 Customization
+## 🎨 Customization
 
 Colors, radii, shadows, and transitions can be centralized via CSS variables (in css/style.css).
 Icons: Boxicons are included via CDN:
