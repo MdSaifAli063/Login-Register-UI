@@ -79,15 +79,18 @@ Notes:
 
 ## 🎨 Customization
 
-Colors, radii, shadows, and transitions can be centralized via CSS variables (in css/style.css).
+- Colors, radii, shadows, and transitions can be centralized via CSS variables (in css/style.css).
+  
 Icons: Boxicons are included via CDN:
+```
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
+```
 Use them in HTML like:
+```
 <i class="bx bx-envelope"></i>
 <i class="bx bx-lock-alt"></i>
 <i class="bx bx-user"></i>
-
+```
 Background: Replace or remove any background image/gradient rules in your
 CSS if desired.
 
