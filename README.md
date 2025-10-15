@@ -96,9 +96,9 @@ CSS if desired.
 
 ## ♿ Accessibility
 
-Labels are associated with inputs via for and id.
-Keyboard users can tab through inputs and buttons.
-Consider honoring prefers-reduced-motion in CSS if you add animations.
+- Labels are associated with inputs via for and id.
+- Keyboard users can tab through inputs and buttons.
+- Consider honoring prefers-reduced-motion in CSS if you add animations.
 
 🧰 Scripts
 
