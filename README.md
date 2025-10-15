@@ -63,14 +63,14 @@ Example (brand logo):
 ```
 
 Example (user avatar):
-
+```html
 <div class="brand">
   <div class="brand-logo avatar">
     <img src="assets/user-avatar.jpg" alt="User avatar">
   </div>
   <h2 class="brand-title">Sign in to continue</h2>
 </div>
-
+```
 Notes:
 
 Put your image under assets/ (or any path you prefer) and update the src.
