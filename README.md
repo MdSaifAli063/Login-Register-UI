@@ -31,7 +31,6 @@ A clean, modern Login & Register interface built with HTML, CSS, and JavaScript 
 
 . ├── index.html ├── css/ │ └── style.css └── js/ └── script.js
 
----
 
 ## 🚀 Quick Start
 
