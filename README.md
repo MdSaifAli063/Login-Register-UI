@@ -120,10 +120,6 @@ js/script.js can:
 - Commit changes: git commit -m "Improve form validation and focus states"
 - Push and open a PR
 
-## 📄 License
-
-This project is provided as-is for personal or commercial use. If you need a specific license (e.g., MIT), add a LICENSE file and update this section accordingly.
-
 ## 🙏 Acknowledgements
 
 - Icons: Boxicons
@@ -135,3 +131,8 @@ This project is provided as-is for personal or commercial use. If you need a spe
 - A: Yes, swap the Boxicons CDN and update icon class names accordingly.
 - Q: How do I change the primary color?
 - A: Update the relevant CSS variables (e.g., --blue-500, --blue-600) in css/style.css.
+
+## 📄 License
+
+This project is provided as-is for personal or commercial use. If you need a specific license (e.g., MIT), add a LICENSE file and update this section accordingly.
+
