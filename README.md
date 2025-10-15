@@ -114,7 +114,7 @@ js/script.js can:
 ![image](https://github.com/MdSaifAli063/Login-Register-UI/blob/fee633c0c5cf603380553214d3c6e641b300882a/Screenshot%202025-09-13%20014254.png)
 
 
-🤝 Contributing
+## 🤝 Contributing
 
 Fork the repo
 Create a feature branch: git checkout -b feat/better-validation
