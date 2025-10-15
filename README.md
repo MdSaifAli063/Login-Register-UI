@@ -100,7 +100,7 @@ CSS if desired.
 - Keyboard users can tab through inputs and buttons.
 - Consider honoring prefers-reduced-motion in CSS if you add animations.
 
-🧰 Scripts
+## 🧰 Scripts
 
 js/script.js can:
 Toggle the active form (login/register)
