@@ -53,14 +53,14 @@ A clean, modern Login & Register interface built with HTML, CSS, and JavaScript 
 Place a brand/user header inside the `.wrapper`, above `.form-header` in `index.html`.
 
 Example (brand logo):
-
+```html
 <div class="brand">
   <div class="brand-logo">
     <img src="assets/logo.png" alt="Brand logo">
   </div>
   <h2 class="brand-title">Welcome back</h2>
 </div>
-
+```
 
 Example (user avatar):
 
