@@ -20,7 +20,7 @@
         <!-- LOGIN FORM -->
         <form action="#" class="login-form" autocomplete="off">
             <div class="input-box">
-                <input type="text" class="input-field" id="log-email" required>
+                <input type="email" class="input-field" id="log-email" required>
                 <label for="log-email" class="label">Email</label>
                 <i class='bx bx-envelope icon'></i>
             </div>
@@ -39,7 +39,7 @@
                 <button class="btn-submit" id="SignInBtn">Sign In <i class='bx bx-log-in' ></i></button>
             </div>
             <div class="switch-form">
-                <span>Don't have an account? <a href="#" onclick="registerFunction()">Register</a></span>
+                <span>Don't have an account? <a href="#register" class="switch-link" data-view="register">Register</a></span>
             </div>
         </form>
 
@@ -51,7 +51,7 @@
                 <i class='bx bx-user icon' ></i>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" id="reg-email" required>
+                <input type="email" class="input-field" id="reg-email" required>
                 <label for="reg-email" class="label">Email</label>
                 <i class='bx bx-envelope icon'></i>
             </div>
@@ -71,7 +71,7 @@
                 <button class="btn-submit" id="SignUpBtn">Sign Up <i class='bx bx-user-plus' ></i></button>
             </div>
             <div class="switch-form">
-                <span>Already have an account? <a href="#" onclick="loginFunction()">Login</a></span>
+                <span>Already have an account? <a href="#login" class="switch-link" data-view="login">Login</a></span>
             </div>
         </form>
     </div>
