@@ -358,6 +358,12 @@ form {
 .input-box.error .label {
   color: #b91c1c;
 }
+.form-cols.error {
+  color: #b91c1c;
+}
+.form-cols.error #agree {
+  border-color: #ef4444;
+}
 
 /* Make sure links have good focus styles */
 a:focus-visible {
