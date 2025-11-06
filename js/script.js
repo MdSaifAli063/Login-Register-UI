@@ -100,8 +100,135 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  if (signUpBtn) signUpBtn.addEventListener('click', onActivate('register'));
-  if (signInBtn) signInBtn.addEventListener('click', onActivate('login'));
+  // Handle switch-form links (Register/Login links at bottom of forms)
+  const switchLinks = document.querySelectorAll('.switch-link');
+  switchLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const view = this.getAttribute('data-view');
+      if (view === 'login' || view === 'register') {
+        setView(view, { updateHash: true });
+      }
+    });
+  });
+
+  // Clear error states on input
+  const clearErrorOnInput = (input) => {
+    if (input) {
+      input.addEventListener('input', function() {
+        this.closest('.input-box')?.classList.remove('error');
+      });
+    }
+  };
+  
+  clearErrorOnInput(qs('#log-email'));
+  clearErrorOnInput(qs('#log-pass'));
+  clearErrorOnInput(qs('#reg-name'));
+  clearErrorOnInput(qs('#reg-email'));
+  clearErrorOnInput(qs('#reg-pass'));
+  
+  if (qs('#agree')) {
+    qs('#agree').addEventListener('change', function() {
+      this.closest('.form-cols')?.classList.remove('error');
+    });
+  }
+
+  // Handle form submissions
+  if (loginForm) {
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const emailInput = qs('#log-email');
+      const passwordInput = qs('#log-pass');
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
+      
+      // Remove previous error states
+      emailInput.closest('.input-box')?.classList.remove('error');
+      passwordInput.closest('.input-box')?.classList.remove('error');
+      
+      let hasError = false;
+      
+      if (!email) {
+        emailInput.closest('.input-box')?.classList.add('error');
+        hasError = true;
+      }
+      if (!password) {
+        passwordInput.closest('.input-box')?.classList.add('error');
+        hasError = true;
+      }
+      
+      if (!hasError && email && password) {
+        // Add your login logic here
+        console.log('Login attempt:', { email, password });
+        // Example: 
+        // fetch('/api/login', { 
+        //   method: 'POST', 
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({ email, password }) 
+        // })
+        // .then(response => response.json())
+        // .then(data => { /* handle success */ })
+        // .catch(error => { /* handle error */ });
+        alert('Login successful! (Add your authentication logic in js/script.js)');
+      }
+    });
+  }
+
+  if (registerForm) {
+    registerForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nameInput = qs('#reg-name');
+      const emailInput = qs('#reg-email');
+      const passwordInput = qs('#reg-pass');
+      const agreeCheckbox = qs('#agree');
+      
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
+      const agree = agreeCheckbox.checked;
+      
+      // Remove previous error states
+      nameInput.closest('.input-box')?.classList.remove('error');
+      emailInput.closest('.input-box')?.classList.remove('error');
+      passwordInput.closest('.input-box')?.classList.remove('error');
+      agreeCheckbox.closest('.form-cols')?.classList.remove('error');
+      
+      let hasError = false;
+      
+      if (!name) {
+        nameInput.closest('.input-box')?.classList.add('error');
+        hasError = true;
+      }
+      if (!email) {
+        emailInput.closest('.input-box')?.classList.add('error');
+        hasError = true;
+      }
+      if (!password) {
+        passwordInput.closest('.input-box')?.classList.add('error');
+        hasError = true;
+      }
+      if (!agree) {
+        agreeCheckbox.closest('.form-cols')?.classList.add('error');
+        hasError = true;
+        alert('Please agree to the terms & conditions');
+      }
+      
+      if (!hasError && name && email && password && agree) {
+        // Add your registration logic here
+        console.log('Registration attempt:', { name, email, password });
+        // Example:
+        // fetch('/api/register', { 
+        //   method: 'POST', 
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({ name, email, password }) 
+        // })
+        // .then(response => response.json())
+        // .then(data => { /* handle success */ })
+        // .catch(error => { /* handle error */ });
+        alert('Registration successful! (Add your authentication logic in js/script.js)');
+      }
+    });
+  }
 
   const getHashView = () => (String(location.hash).toLowerCase() === '#register' ? 'register' : 'login');
 
