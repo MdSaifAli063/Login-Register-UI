@@ -26,7 +26,6 @@ A clean, modern Login & Register interface built with HTML, CSS, and JavaScript 
 
 ## 📂 Project Structure
 
-
 . ├── index.html ├── css/ │ └── style.css └── js/ └── script.js
 
 
