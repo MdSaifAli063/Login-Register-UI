@@ -105,7 +105,6 @@ js/script.js can:
 - Handle basic events like button clicks and form submission
 - Add your authentication logic (e.g., fetch/axios) as needed.
 
-
 ## 🤝 Contributing
 
 - Fork the repo
