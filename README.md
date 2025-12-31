@@ -8,6 +8,7 @@ A clean, modern Login & Register interface built with HTML, CSS, and JavaScript 
 ![Icons](https://img.shields.io/badge/Icons-Boxicons-1E90FF)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-34D399)
 
+
 ## ✨ Features
 
 - 🧭 Two-tab auth: Login and Register
